@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.rawgit.com/rastikerdar/vazir-font/v20.1.1/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Timer</title>
+    <style>
+        html,
+        input,
+        button {
+            font-family: "Vazir" !important;
+            direction: rtl;
+        }
+
+        input:focus,
+        button:focus {
+            outline: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box {
+            margin: 20px 0;
+        }
+
+        .box #in-counter {
+            padding: 7px;
+            width: 250px;
+            outline-color: black;
+            border: 2px solid rgba(0, 0, 0, .4);
+            border-radius: 5px;
+        }
+
+        .box #counting {
+            border: none;
+            padding: 9px 13px;
+            cursor: pointer;
+            background: #e74c3c;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .message {
+            margin-top: 10px;
+            font-size: .9em;
+        }
+
+
+        #msg {
+            margin: 20px 0;
+            font-weight: 900;
+            font-size: 0.9em;
+            display: none;
+        }
+
+        #msg.active {
+            display: block;
+        }
+
+        .c100 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--  -->
+        <div id="msg">
+        </div>
+        <!--  -->
+        <div class="box">
+            <form id="box-form">
+                <input type="text" id="in-counter" placeholder="زمان را به ثانیه وارد کنید">
+                <button type="submit" id="counting">شروع</button>
+            </form>
+        </div>
+        <!--  -->
+        <div class="c100 p100">
+            <span>250</span>
+            <div class="slice">
+                <div class="bar">
+                </div>
+                <div class="fill">
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
